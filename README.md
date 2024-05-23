@@ -67,13 +67,20 @@ The File Integrity Monitor is a host-based system designed to ensure the integri
 ## How It Works
 
 1. **Set Baseline:**
-    - The user selects a CSV file, which is set as the baseline for the system. This file contains the initial hash values of the monitored files.
+    - The user selects a CSV file, which is set as the baseline for the system. This file contains the initial hash values of the monitored files. 
+
+https://github.com/Jas424/FIM/assets/88213779/0b74b5bc-afb2-4dca-91e1-9a0e0b0bff58
+
 
 2. **Add Files to Baseline:**
     - The function calculates the hash value of the selected file and adds it to the baseline CSV file.
+   
+https://github.com/Jas424/FIM/assets/88213779/aa3bb634-6063-4bfc-bbc7-dc55217b13a4
 
 3. **Check Files Against Baseline:**
     - The script compares the current hash values of the files against the baseline. Any modifications or deletions trigger an alert.
+   
+https://github.com/Jas424/FIM/assets/88213779/9de17c87-91fe-46fd-b846-a72d28985f18
 
 4. **Check Files with Email Notifications:**
     - Similar to the regular check, but also sends an email alert if any changes are detected.
@@ -86,6 +93,9 @@ The File Integrity Monitor is a host-based system designed to ensure the integri
 
 7. **Continuous Monitoring:**
     - The script continuously monitors the files at specified intervals, providing close to real-time alerts for any detected changes.
+<img width="585" alt="Screenshot 2024-05-23 at 1 22 51 PM" src="https://github.com/Jas424/FIM/assets/88213779/30541c43-cb3e-4c9b-9a2c-7e71e5f48f3b">
+
+
 
 ## Backup and Restore
 
@@ -99,6 +109,19 @@ The File Integrity Monitor is a host-based system designed to ensure the integri
 - This is achieved using the Mime Kit libraries for secure email operations.
 
 
+## DEMO 
+
+-  In this scenario, the user downloads a malware disguised as a shortcut. Upon clicking the malware, the files are deleted! Since the user has the continous monitoring function (option 7) turned on, the user is  notified in red text on the console. 
+
+https://github.com/Jas424/FIM/assets/88213779/2c1fa170-0a48-428b-b063-5dcf6038b5d0
+
+- User is notfied vis email as well!
+
+![image](https://github.com/Jas424/FIM/assets/88213779/80908f54-f09d-4a33-9b89-4b44cea43c02)
+
+-Luckily, the user is able to restore the file as the tool stored backups of the baselines and the files in the directory.
+
+https://github.com/Jas424/FIM/assets/88213779/9f0cd763-130c-461b-b9bf-8b3a001ecb59
 
 
 
